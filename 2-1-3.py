@@ -11,7 +11,7 @@ Problem:
 Pseudocode
 
 SEARCH(A,v)
-for j = 1 to length[A]
+for j = 1 to A.length
     if A[j] == v
         then return j
 return NIL
