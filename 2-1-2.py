@@ -5,7 +5,7 @@ Rewrite the Insertion-Sort procedure to sort into nonincreasing instead of nonde
 Pseudocode
 
 SOLUTION(A)
-for j = 2 to length[A]
+for j = 2 to A.length
     key = A[j]
     i = j-1
     while i>0 and A[i]<key
