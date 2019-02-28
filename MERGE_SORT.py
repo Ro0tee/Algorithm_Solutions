@@ -12,7 +12,7 @@ for j =1 to n
 for j=1 to m
     R[j] = A[q+j]
 L[n+1] = inf
-R[m+1]  inf
+R[m+1] = inf
 i = 1
 j = 1
 for k=p to r
