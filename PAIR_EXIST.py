@@ -14,7 +14,7 @@ return false
 '''
 
 #MERGE
-def MERGE(A,p,q,r):
+def merge(A,p,q,r):
     n = q-p+1
     m = r-q
     L = [0 for i in range(0,n+1)]
@@ -36,12 +36,12 @@ def MERGE(A,p,q,r):
             j+=1
 
 #MERGE-SORT
-def MERGE_SORT(A,p,r):
+def merge_sort(A,p,r):
     if(p<r):
         q = (p+r)//2
-        MERGE_SORT(A,p,q)
-        MERGE_SORT(A,q+1,r)
-        MERGE(A,p,q,r)
+        merge_sort(A,p,q)
+        merge_sort(A,q+1,r)
+        merge(A,p,q,r)
 
 #BINARY_SEARCH
 def binary_search(A,v,low,high):
@@ -57,8 +57,8 @@ def binary_search(A,v,low,high):
     return None
 
 #PAIR_EXIST
-def PAIR_EXIST(S,x):
-    MERGE_SORT(S,0,len(S)-1)
+def pair_exist(S,x):
+    merge_sort(S,0,len(S)-1)
     for j in range(0,len(S)-1):
         if(binary_search(S,x-S[j],0,len(S)-1)!=None):
             return True
@@ -67,7 +67,7 @@ def PAIR_EXIST(S,x):
 #test
 S = [0,1,2,5,7,9]
 x = 9
-print(PAIR_EXIST(S,x))
+print(pair_exist(S,x))
 x = 13
-print(PAIR_EXIST(S,x))
+print(pair_exist(S,x))
 
