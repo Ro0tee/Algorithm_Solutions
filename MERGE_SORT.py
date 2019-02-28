@@ -37,7 +37,7 @@ if p<r
 '''
 
 #MERGE
-def MERGE(A,p,q,r):
+def merge(A,p,q,r):
     n = q-p+1
     m = r-q
     L = [0 for i in range(0,n+1)]
@@ -59,14 +59,14 @@ def MERGE(A,p,q,r):
             j+=1
 
 #MERGE-SORT
-def MERGE_SORT(A,p,r):
+def merge_sort(A,p,r):
     if(p<r):
         q = (p+r)//2
-        MERGE_SORT(A,p,q)
-        MERGE_SORT(A,q+1,r)
-        MERGE(A,p,q,r)
+        merge_sort(A,p,q)
+        merge_sort(A,q+1,r)
+        merge(A,p,q,r)
 
 #test
 A = [31,41,59,26,41,58]
-MERGE_SORT(A,0,len(A)-1)
+merge_sort(A,0,len(A)-1)
 print(A)
